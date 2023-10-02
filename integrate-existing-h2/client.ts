@@ -1,13 +1,14 @@
+import {Storefront, createWithCache} from '@shopify/hydrogen';
 import {
-  createWeaverseClient,
-  getWeaverseConfigs,
   I18nLocale,
+  WeaverseClient,
+  getWeaverseConfigs,
 } from '@weaverse/hydrogen';
-import {themeSchema} from '~/weaverse/theme-schema';
+import {countries} from '~/data/countries';
 import {components} from '~/weaverse/components';
-import {createWithCache, Storefront} from '@shopify/hydrogen';
+import {themeSchema} from '~/weaverse/schema.server';
 
-export type CreateWeaverseClient = {
+type CreateWeaverseArgs = {
   storefront: Storefront<I18nLocale>;
   request: Request;
   env: Env;
@@ -15,23 +16,16 @@ export type CreateWeaverseClient = {
   waitUntil: ExecutionContext['waitUntil'];
 };
 
-export function weaverseClient({
+export function createWeaverseClient({
   storefront,
   request,
   env,
   cache,
   waitUntil,
-}: CreateWeaverseClient) {
-  return createWeaverseClient({
+}: CreateWeaverseArgs) {
+  return new WeaverseClient({
     storefront,
-    countries: { // or import {countries} from '~/data/countries';
-      default: {
-        label: 'United States (USD $)',
-        language: 'EN',
-        country: 'US',
-        currency: 'USD',
-      }
-    },
+    countries,
     themeSchema,
     components,
     configs: getWeaverseConfigs(request, env),
@@ -39,4 +33,29 @@ export function weaverseClient({
   });
 }
 
-export default weaverseClient;
+export function getWeaverseCsp(request: Request) {
+  let url = new URL(request.url);
+  // Get weaverse host from query params
+  let weaverseHost = url.searchParams.get('weaverseHost');
+  let weaverseHosts = ['https://*.weaverse.io'];
+  if (weaverseHost) {
+    weaverseHosts.push(weaverseHost);
+  }
+  return {
+    frameAncestors: weaverseHosts,
+    defaultSrc: [
+      "'self'",
+      'https://cdn.shopify.com',
+      'https://shopify.com',
+      'https://*.youtube.com',
+      'https://fonts.gstatic.com',
+      ...weaverseHosts,
+    ],
+    styleSrc: [
+      "'self'",
+      "'unsafe-inline'",
+      'https://cdn.shopify.com',
+      ...weaverseHosts,
+    ],
+  };
+}
