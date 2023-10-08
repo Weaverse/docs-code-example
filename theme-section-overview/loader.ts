@@ -1,6 +1,6 @@
-export let loader = async ({context}: WeaverseLoaderArgs) => {
-  let {language, country} = context.storefront.i18n;
-  return await context.storefront.query<HomepageFeaturedProductsQuery>(
+export let loader = async ({weaverse}: ComponentLoaderArgs) => {
+  let {language, country} = weaverse.storefront.i18n;
+  return await weaverse.storefront.query<HomepageFeaturedProductsQuery>(
     HOMEPAGE_FEATURED_PRODUCTS_QUERY,
     {
       variables: {
