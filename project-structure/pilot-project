@@ -1,0 +1,21 @@
+🧠 <root>
+├── 📁 app
+│   ├── 📁 routes
+│   ├── 📁 sections
+│   ├── 📁 weaverse
+│   ├── 📄 entry.client.tsx
+│   ├── 📄 entry.server.tsx
+│   └── 📄 root.tsx
+├── 📁 dist
+│   ├── 📁 client
+│   └── 📁 worker
+├── 📁 public
+│   └── 📄 favicon.svg
+├── 📄 .editorconfig
+├── 📄 .env
+├── 📄 package.json
+├── 📄 remix.config.js
+├── 📄 remix.env.d.ts
+├── 📄 server.ts
+├── 📄 sync-project.md
+└── 📄 tailwind.config.js
