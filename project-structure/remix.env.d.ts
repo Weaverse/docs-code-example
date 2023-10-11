@@ -1,3 +1,5 @@
+import type {WeaverseClient} from '@weaverse/hydrogen';
+
 /**
  * Declare expected Env parameter in fetch handler.
  */
@@ -8,8 +10,7 @@ interface Env {
   PUBLIC_STORE_DOMAIN: string;
   PUBLIC_STOREFRONT_ID: string;
   /**
-   * Include the Weaverse Project's Id - you'll find this in the Weaverse Editor
-   * under Project Settings.
+   * Include the Weaverse Project's ID - you'll find this in the Weaverse Editor under Project Settings.
    * And the optional Weaverse Host - which value is https://weaverse.io by default.
    */
   WEAVERSE_PROJECT_ID: string;
