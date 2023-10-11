@@ -3,7 +3,6 @@ import {createWeaverseClient} from '~/weaverse/create-weaverse.server';
 const handleRequest = createRequestHandler({
   // ...
   getLoadContext: () => ({
-    // App context properties
     // Injecting the Weaverse client into the loader context.
     weaverse: createWeaverseClient({
       storefront,
@@ -12,5 +11,6 @@ const handleRequest = createRequestHandler({
       cache,
       waitUntil,
     }),
+    // ... more app context properties
   }),
 });
