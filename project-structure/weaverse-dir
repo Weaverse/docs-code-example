@@ -1,0 +1,6 @@
+📁 weaverse
+├── 📄 components.ts
+├── 📄 create-weaverse.server.ts
+├── 📄 index.tsx
+├── 📄 schema.server.ts
+└── 📄 style.tsx
