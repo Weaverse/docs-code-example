@@ -1,0 +1,2 @@
+title: string;
+type: string;
