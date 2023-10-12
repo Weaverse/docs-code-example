@@ -1,0 +1,1 @@
+presets?: Omit<HydrogenComponentPresets, 'type'>
