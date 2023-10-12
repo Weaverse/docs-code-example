@@ -1,6 +1,6 @@
 import type { HydrogenComponentSchema } from '@weaverse/hydrogen';
 
-let exampleSchema: HydrogenComponentSchema = {
+export let schema: HydrogenComponentSchema = {
   title: 'Product Card',
   type: 'product-card',
   inspector: [
