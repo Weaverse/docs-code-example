@@ -1,8 +1,8 @@
 interface HydrogenComponentSchema {
   title: string;
   type: string;
-  childTypes?: string[];
   inspector: InspectorGroup[];
+  childTypes?: string[];
   presets?: Omit<HydrogenComponentPresets, 'type'>;
   limit?: number;
   enabledOn?: {
