@@ -2,6 +2,6 @@
   type: "text",
   label: "Heading",
   name: "heading",
-  defaultValue: "New Arrival",
+  defaultValue: "Testimonials",
   placeholder: "Enter section heading",
 }
