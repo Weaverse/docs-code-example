@@ -10,4 +10,4 @@
     ],
   },
   defaultValue: "large",
-},
+}
