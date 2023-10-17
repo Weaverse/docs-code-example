@@ -1,6 +1,6 @@
 {
   type: "datepicker",
-  label: "Start Date",
+  label: "Start date",
   name: "startDate",
   defaultValue: "2024-01-01"
 }
