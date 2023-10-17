@@ -1,6 +1,6 @@
 {
   type: "map-autocomplete",
-  name: "location",
-  label: "Location",
+  name: "address",
+  label: "Business address",
   defaultValue: "San Francisco, CA"
 }
