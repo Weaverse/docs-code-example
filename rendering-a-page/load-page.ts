@@ -9,6 +9,6 @@ export async function loader(args: RouteLoaderArgs) {
   return json({
     // The key prop for a Weaverse page must always be `weaverseData`
     weaverseData: await context.weaverse.loadPage(),
-    // more page data here
+    // Additional page data...
   });
 }
