@@ -1,3 +1,5 @@
+// <root>/remix.env.d.ts
+
 import type {WeaverseClient} from '@weaverse/hydrogen';
 
 /**
