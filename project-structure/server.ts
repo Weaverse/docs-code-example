@@ -1,3 +1,5 @@
+// <root>/server.ts
+
 import {createWeaverseClient} from '~/weaverse/create-weaverse.server';
 
 const handleRequest = createRequestHandler({
