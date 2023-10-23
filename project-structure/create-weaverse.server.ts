@@ -1,3 +1,5 @@
+// <root>/app/weaverse/create-weaverse.server.ts
+
 import {Storefront} from '@shopify/hydrogen';
 import {I18nLocale, WeaverseClient} from '@weaverse/hydrogen';
 import {countries} from '~/data/countries';
