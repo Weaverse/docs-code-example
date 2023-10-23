@@ -1,3 +1,5 @@
+// <root>/app/routes/($locale)._index.tsx
+
 import { json } from '@shopify/remix-oxygen';
 import { type RouteLoaderArgs } from '@weaverse/hydrogen';
 
