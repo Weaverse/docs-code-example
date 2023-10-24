@@ -2,9 +2,7 @@ import type {ComponentLoaderArgs} from '@weaverse/hydrogen';
 
 export let loader = async ({weaverse}: ComponentLoaderArgs) => {
   let {fetchWithCache, storefront} = weaverse;
-  let API = `https://external-api`;
-
-  return await fetchWithCache(API, {
+  return await fetchWithCache(`https://external-api.endpoint`, {
     strategy: storefront.CacheCustom({
       mode: 'must-revalidate, no-transform',
       maxAge: 30,
