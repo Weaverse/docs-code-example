@@ -1,10 +1,7 @@
 import type {ComponentLoaderArgs} from '@weaverse/hydrogen';
 
 type PokemonData = {
-  name: string;
-  sprites: {
-    front_default: string;
-  };
+  // Type definition...
 }
 
 export let loader = async ({weaverse}: ComponentLoaderArgs) => {
