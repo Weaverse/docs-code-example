@@ -7,6 +7,6 @@ export async function loader(args: RouteLoaderArgs) {
   let {context} = args;
   return json({
     weaverseData: await context.weaverse.loadPage({  type: "COLLECTION" }),
-    // any additional page data
+    // Additional page data...
   });
 }
