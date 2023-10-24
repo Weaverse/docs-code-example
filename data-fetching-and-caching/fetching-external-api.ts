@@ -7,7 +7,7 @@ type PokemonData = {
   };
 }
 
-export let loader = async ({weaverse}: ComponentLoaderArgs<HeroSectionData>) => {
+export let loader = async ({weaverse}: ComponentLoaderArgs) => {
   let {fetchWithCache, env} = weaverse;
   let API = `https://pokeapi.co/api/v2/pokemon/pikachu`
 
