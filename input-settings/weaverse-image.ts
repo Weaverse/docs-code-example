@@ -1,7 +1,7 @@
 type WeaverseImage = {
   id: string
   url: string
-  alt: string
+  altText: string
   width: number
   height: number
 }
