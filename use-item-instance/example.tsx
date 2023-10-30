@@ -1,6 +1,6 @@
 import { useItemInstance } from '@weaverse/hydrogen';
 
-functiom MyComponent() {
+function MyComponent() {
   let instance = useItemInstance('itemId');
 
   // Interact with the item instance
